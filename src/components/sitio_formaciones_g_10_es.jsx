@@ -71,6 +71,7 @@ const formations = [
     ],
     recommendation: 'Empieza aquí si vienes de otra área, tienes poca experiencia práctica o quieres revisar fundamentos antes del challenge.',
     color: 'from-slate-50 to-slate-100',
+    link: 'https://app.aluracursos.com/formacion-nivelacion-one-ai-for-tech-g10'
   },
   {
     id: 'generativa',
@@ -111,6 +112,7 @@ const formations = [
     ],
     recommendation: 'Ideal después de Nivelación o en paralelo si ya programas y quieres aplicar IA en tu flujo de trabajo.',
     color: 'from-violet-50 to-indigo-100',
+    link: 'https://app.aluracursos.com/formacion-desarollo-y-orquestacion-con-ia-generativa-one'
   },
   {
     id: 'agentes',
@@ -173,6 +175,7 @@ const formations = [
     ],
     recommendation: 'Recomendada para quienes ya tienen fundamentos y quieren construir soluciones útiles para procesos reales.',
     color: 'from-emerald-50 to-teal-100',
+    link: 'https://app.aluracursos.com/formacion-ingenieria-de-agentes-y-automatizacion-con-ia-one'
   },
   {
     id: 'rag',
@@ -213,6 +216,7 @@ const formations = [
     ],
     recommendation: 'La ruta más indicada para perfiles de datos, IA aplicada o estudiantes que quieren crear proyectos con información propia.',
     color: 'from-sky-50 to-cyan-100',
+    link: 'https://app.aluracursos.com/formacion-inteligencia-de-datos-y-rag-avanzado-one'
   },
   {
     id: 'oci',
@@ -243,6 +247,7 @@ const formations = [
     ],
     recommendation: 'Muy útil si tu challenge necesita ser publicado, desplegado o conectado con servicios de nube.',
     color: 'from-orange-50 to-amber-100',
+    link: 'https://app.aluracursos.com/formacion-oci-one-ai-for-tech'
   },
 ];
 
@@ -544,6 +549,11 @@ export default function FormacionesG10Site() {
                         <p className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">{formation.badge}</p>
                         <h3 className="mt-3 text-2xl font-bold sm:text-3xl">{formation.title}</h3>
                         <p className="mt-4 leading-7 text-slate-700">{formation.summary}</p>
+                        {formation.link && (
+                          <a href={formation.link} target="_blank" rel="noopener noreferrer">
+                            <Button className="mt-4 rounded-full">Ver formación completa</Button>
+                          </a>
+                        )}
                         <div className="mt-5 grid gap-3 sm:grid-cols-2">
                           <div className="rounded-2xl bg-white/70 p-4">
                             <p className="flex items-center gap-2 text-sm font-semibold text-slate-500"><Clock className="h-4 w-4" /> Carga horaria</p>
