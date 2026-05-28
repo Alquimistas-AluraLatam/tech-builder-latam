@@ -110,42 +110,41 @@ O diagrama abaixo ilustra a jornada recomendada de acordo com as escolhas de tri
 ```mermaid
 flowchart TD
     %% Estilos de nós
-    classDef default fill:#0f172a,stroke:#334155,stroke-width:1px,color:#f8fafc;
     classDef main fill:#1e1b4b,stroke:#4f46e5,stroke-width:2px,color:#e0e7ff;
     classDef path fill:#022c22,stroke:#0d9488,stroke-width:2px,color:#ccfbf1;
     classDef challenge fill:#7c2d12,stroke:#ea580c,stroke-width:2px,color:#ffedd5;
 
     %% Nós Principais
-    Start([Início dos Estudos - ONE G10]) :::main
-    
+    Start(["Início dos Estudos - ONE G10"]):::main
+
     %% Decisões de Perfil
-    Start --> RouteA{Qual o seu perfil?}
-    
-    RouteA -->|Iniciante / Transição| P1[Rota 1: Iniciante] :::path
-    RouteA -->|Back-end / Full-stack| P2[Rota 2: Back-end] :::path
-    RouteA -->|Dados / IA Aplicada| P3[Rota 3: Dados & RAG] :::path
-    RouteA -->|Front-end + IA| P4[Rota 4: Front-end] :::path
-    
+    Start --> RouteA{"Qual o seu perfil?"}
+
+    RouteA -->|"Iniciante / Transição"| P1["Rota 1: Iniciante"]:::path
+    RouteA -->|"Back-end / Full-stack"| P2["Rota 2: Back-end"]:::path
+    RouteA -->|"Dados / IA Aplicada"| P3["Rota 3: Dados & RAG"]:::path
+    RouteA -->|"Front-end + IA"| P4["Rota 4: Front-end"]:::path
+
     %% Mapeamento das rotas
-    P1 --> F_Niv[1. Nivelación - 44h]
-    F_Niv --> F_Gen[2. IA Generativa - 21h]
-    F_Gen --> F_OCI[3. Oracle Cloud Infrastructure - 18h - Opcional]
-    
-    P2 --> F_Niv_Opt[1. Nivelación - Opcional]
-    F_Niv_Opt --> F_Gen2[2. IA Generativa - 21h]
-    F_Gen2 --> F_Age[3. Engenharia de Agentes - 26h]
-    F_Age --> F_OCI2[4. Oracle Cloud Infrastructure - 18h]
+    P1 --> F_Niv["1. Nivelación - 44h"]
+    F_Niv --> F_Gen["2. IA Generativa - 21h"]
+    F_Gen --> F_OCI["3. Oracle Cloud Infrastructure - 18h - Opcional"]
 
-    P3 --> F_Niv_Data[1. Nivelación - 44h]
-    F_Niv_Data --> F_Gen3[2. IA Generativa - 21h]
-    F_Gen3 --> F_RAG[3. Dados e RAG Avançado - 24h]
+    P2 --> F_Niv_Opt["1. Nivelación - Opcional"]
+    F_Niv_Opt --> F_Gen2["2. IA Generativa - 21h"]
+    F_Gen2 --> F_Age["3. Engenharia de Agentes - 26h"]
+    F_Age --> F_OCI2["4. Oracle Cloud Infrastructure - 18h"]
 
-    P4 --> F_Gen4[1. IA Generativa - 21h]
-    F_Gen4 --> F_Age2[2. Engenharia de Agentes - 26h]
-    F_Age2 --> F_OCI3[3. Oracle Cloud Infrastructure - Opcional]
-    
+    P3 --> F_Niv_Data["1. Nivelación - 44h"]
+    F_Niv_Data --> F_Gen3["2. IA Generativa - 21h"]
+    F_Gen3 --> F_RAG["3. Dados e RAG Avançado - 24h"]
+
+    P4 --> F_Gen4["1. IA Generativa - 21h"]
+    F_Gen4 --> F_Age2["2. Engenharia de Agentes - 26h"]
+    F_Age2 --> F_OCI3["3. Oracle Cloud Infrastructure - Opcional"]
+
     %% Finalização
-    F_OCI --> Chal[🏆 CHALLENGE INDIVIDUAL] :::challenge
+    F_OCI --> Chal["CHALLENGE INDIVIDUAL"]:::challenge
     F_OCI2 --> Chal
     F_RAG --> Chal
     F_OCI3 --> Chal
