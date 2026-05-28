@@ -86,7 +86,8 @@ function App() {
 
 export default App;
 ```
-
+git commit --allow-empty -m "trigger deploy"
+git push origin master
 ---
 
 ## 🗺️ Estrutura das Rotas de Aprendizado
