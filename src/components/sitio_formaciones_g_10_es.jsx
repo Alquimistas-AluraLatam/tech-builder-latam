@@ -265,6 +265,7 @@ const paths = [
     steps: [
       'Nivelación',
       'Desarrollo y Orquestación con IA Generativa',
+      'Oracle Cloud Infrastructure',
       'Challenge',
     ],
 
@@ -304,9 +305,9 @@ const paths = [
     duration: '8 semanas',
 
     steps: [
-      'Nivelación',
       'Desarrollo y Orquestación con IA Generativa',
       'Inteligencia de Datos y RAG Avanzado',
+      'Oracle Cloud Infrastructure',
       'Challenge',
     ],
 
@@ -327,6 +328,7 @@ const paths = [
     steps: [
       'Desarrollo y Orquestación con IA Generativa',
       'Ingeniería de Agentes y Automatización con IA',
+      'Oracle Cloud Infrastructure',
       'Challenge',
     ],
 
@@ -354,7 +356,8 @@ export default function FormacionesG10Site() {
 
   const visibleFormations = useMemo(() => {
     if (activeFilter === 'Todas') return formations;
-    if (activeFilter === 'Datos') return formations.filter((f) => f.audience.some((a) => a.includes('datos') || a.includes('Analítica') || a.includes('IA aplicada')) || f.id === 'rag');
+    if (activeFilter === 'Datos') return formations.filter((f) => f.audience.some((a) => a.includes('datos') || a.includes('Analítica') || a.includes('IA aplicada')) 
+      || f.id === 'rag' || f.id === 'generativa' || f.id === 'oci' || f.id === 'oci'); 
     return formations.filter((f) => f.audience.some((a) => a.toLowerCase().includes(activeFilter.toLowerCase())) || f.title.toLowerCase().includes(activeFilter.toLowerCase()));
   }, [activeFilter]);
 
@@ -518,7 +521,7 @@ export default function FormacionesG10Site() {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">Catálogo de formaciones</p>
-              <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Explora los conjuntos de cursos disponibles</h2>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Explora las formaciones disponibles</h2>
               <p className="mt-4 text-lg leading-8 text-slate-600">Filtra por interés y revisa qué aprenderás, para quién está pensada cada formación y cómo puede ayudarte en tu proyecto.</p>
             </div>
             <div className="flex flex-wrap items-center gap-2">
