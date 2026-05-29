@@ -256,6 +256,7 @@ const paths = [
     id: 'beginner',
     title: 'Estoy empezando o vengo de otra área',
     icon: Compass,
+    filter: 'Principiantes',
 
     totalHours: 65,
     weeklyHours: '6-8h',
@@ -277,6 +278,7 @@ const paths = [
     id: 'backend',
     title: 'Quiero crecer en back-end o full-stack',
     icon: Code2,
+    filter: 'Back-end',
 
     totalHours: 65,
     weeklyHours: '7-8h',
@@ -298,6 +300,7 @@ const paths = [
     id: 'data',
     title: 'Me interesa ciencia de datos o IA aplicada',
     icon: Database,
+    filter: 'Datos',
 
     totalHours: 89,
     weeklyHours: '10-12h',
@@ -319,6 +322,7 @@ const paths = [
     id: 'frontend',
     title: 'Tengo perfil front-end y quiero sumar IA',
     icon: Sparkles,
+    filter: 'Front-end',
 
     totalHours: 47,
     weeklyHours: '5-6h',
@@ -461,6 +465,16 @@ export default function FormacionesG10Site() {
                                 </div>
                               ))}
                             </div>
+
+                            <a 
+                              onClick={() => {
+                                setActiveFilter(path.filter);
+                                document.getElementById('formaciones')?.scrollIntoView({ behavior: 'smooth' });
+                              }}
+                            >
+                              <Button className="mt-4 rounded-full">¡Quiero empezar!</Button>
+                            </a>
+
                             <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
                               <div className="rounded-2xl bg-slate-100 p-3">
                                 <p className="text-xs text-slate-500">Carga total</p>
